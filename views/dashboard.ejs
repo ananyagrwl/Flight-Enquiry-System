@@ -1,0 +1,70 @@
+<style>
+    .nav{
+        background: black;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 10px;
+    }
+    .dash {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #fff;
+        margin-left: 30px;
+        /* margin-left: 30px; */
+        /* flex-direction: row; */
+        /* padding-top: 10px; */
+        /* padding-bottom: 5px; */
+    }
+    .list{
+        width: 900px;
+        display: flex;
+        justify-content: center;
+    }
+    .list{
+        display: flex;
+        gap: 40px;
+    }
+    .list span a{
+        text-decoration: none;
+        color: white;
+        /* font-size: 18px; */
+        font-weight: 400;
+    }
+   
+</style>
+<html>
+
+<head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row" style="justify-content: space-around;">
+        <div class="col-md-12 nav">
+            <img src="/images/logo.jpg" width="40" alt="" style="margin-left:30px;">
+            <div class="dash">Dashboard</a></div>
+            <div class="list">
+                <span><a href="/flight/" target="mw">Add Flights</a></span>
+                <span><a href="/flight/display" target="mw">Flight List</a></span>
+                <span><a href="/admin/logout">Log Out</a></span>
+            </div>
+            <div>
+                <span style="color: white; justify-content: flex-end; width:250px; margin-right: 40px;"><%=data.adminname%></span>
+                <span><a href="#"><img src="/images/ana.png" width="40" alt=""></a></span>
+            </div>
+        </div>
+
+        <div>
+            <iframe frameborder="0" name="mw" style="width:100vw; height: 100vh;">
+                <!-- <img src="/images/plane2.jpg" alt=""> -->
+            </iframe>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color:#273c75;">
+    <div class="box p-2">
+        <div class="heading d-flex gap-2">
+            <a href="/flight/"><img src="/images/add.png" width="40"></a>
+            <img src="/images/logo.jpg" alt="" width="40">
+            <h4>List Of Flights</h4>
+          </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Flight Name</th>
+                    <th scope="col">Days/<br>Seats</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Logo</th>
+                    <th scope="col">Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <% data.map((i)=>{ %>
+                        <th scope="row">
+                            <%=i.fname%> <br>
+                            <%=i.type%>
+                        </th>
+                        <td>
+                            Seats: <%=i.seats%> <br>
+                            <%=i.days%>
+                        </td>
+                        <td>
+                            <%=i.source%> <br>
+                            <%=i.dtime%>
+                        </td>
+                        <td>
+                            <%=i.destination%> <br>
+                            <%=i.atime%>
+                        </td>
+                        <td>
+                            <%=i.company%>
+                        </td>
+                        <td>
+                            <a href="/flight/searchbyidforimage?flightid= <%=i.fid%> "><img src="/images/<%=i.logo%>" width="30"></a>
+                        </td>
+                        <td>
+                            <a href="/flight/searchbyid?flightid= <%=i.fid%> ">Edit/Delete</a>
+                        </td>
+                </tr>
+                <% })%>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</html>
+
+<!-- RowDataPacket {
+    fid: 86,
+    fname: 'a098',
+    type: 'Business',
+    seats: 50,
+    days: 'tue,wed',
+    scity: 'Gwalior',
+    dtime: '12:40:00',
+    dcity: 'Pune',
+    atime: '22:30:00',
+    company: 'Air India',
+    logo: 'logo.png'
+  }, -->
